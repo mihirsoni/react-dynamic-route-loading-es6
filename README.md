@@ -2,6 +2,8 @@
 
 Webpack 2 automatically splits routes in chunks (small bundles) and loads them on demand. 
 
+[See the demo](https://burning-heat-4609.firebaseapp.com/)
+
 ## Contains
 
 - [x] [Webpack 2](https://webpack.github.io)
