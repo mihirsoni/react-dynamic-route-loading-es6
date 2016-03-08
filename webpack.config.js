@@ -13,7 +13,7 @@ module.exports = {
       'index', 'pages/Home'
     ],
     vendor: [
-      'react'
+      'react', 'react-dom'
     ]
   },
   output: {
@@ -37,7 +37,6 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loaders: [
-          // 'react-hot',
           {
             loader: 'babel',
             query: {
@@ -87,7 +86,6 @@ module.exports = {
   ],
   devServer: {
     contentBase: './client',
-    noInfo: true,
-    // hot: true
+    noInfo: true
   }
 };
