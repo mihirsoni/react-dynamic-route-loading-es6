@@ -7,23 +7,17 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --history-api-fallback --hot --progress --port 3000",
-    "build": "node build.js production",
-    "lint": "./node_modules/.bin/eslint client"
+    "build": "node build.js production"
   },
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.5.0",
-    "babel-eslint": "^4.1.8",
     "babel-loader": "^6.2.2",
     "babel-plugin-transform-runtime": "^6.3.13",
     "babel-preset-es2015-native-modules": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "css-loader": "^0.23.1",
-    "eslint": "^1.10.3",
-    "eslint-config-airbnb": "^5.0.0",
-    "eslint-plugin-react": "^3.16.1",
     "file-loader": "^0.8.4",
-    "image-webpack-loader": "^1.6.3",
     "node-sass": "^3.4.2",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
@@ -34,8 +28,8 @@
     "babel-polyfill": "^6.5.0",
     "babel-runtime": "^6.3.19",
     "extract-text-webpack-plugin": "^1.0.1",
-    "react": "^0.15.0-alpha.1",
-    "react-dom": "^0.14.0",
+    "react": "^15.0.0-rc.1",
+    "react-dom": "^15.0.0-rc.1",
     "react-router": "^2.0.0"
   }
 }
