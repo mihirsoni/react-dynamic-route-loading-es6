@@ -14,19 +14,25 @@ export default {
     {
       path: '/',
       getComponent(location, cb) {
-        System.import('pages/Home').then(loadRoute(cb)).catch(errorLoading);
+        System.import('pages/Home')
+          .then(loadRoute(cb))
+          .catch(errorLoading);
       }
     },
     {
       path: 'blog',
       getComponent(location, cb) {
-        System.import('pages/Blog').then(loadRoute(cb)).catch(errorLoading);
+        System.import('pages/Blog')
+          .then(loadRoute(cb))
+          .catch(errorLoading);
       }
     },
     {
       path: 'about',
       getComponent(location, cb) {
-        System.import('pages/About').then(loadRoute(cb)).catch(errorLoading);
+        System.import('pages/About')
+          .then(loadRoute(cb))
+          .catch(errorLoading);
       }
     },
   ]
