@@ -4,6 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const nodeEnv = process.env.NODE_ENV || 'development';
 const isProd = nodeEnv === 'production';
+let extractCSS = new ExtractTextPlugin('style.css');
 
 module.exports = {
   devtool: isProd ? 'hidden-source-map' : 'cheap-eval-source-map',
@@ -18,7 +19,8 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, './static'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/',
   },
   module: {
     loaders: [
@@ -31,7 +33,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+        loaders: extractCSS.extract(['css','sass'])
       },
       {
         test: /\.(js|jsx)$/,
@@ -80,9 +82,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify(nodeEnv) }
     }),
-    new ExtractTextPlugin('style.css', {
-      allChunks: true
-    })
+    extractCSS,
   ],
   devServer: {
     contentBase: './client',
