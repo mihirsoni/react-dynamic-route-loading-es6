@@ -25,7 +25,19 @@ export default {
         System.import('pages/Blog')
           .then(loadRoute(cb))
           .catch(errorLoading);
-      }
+      },
+      childRoutes: [
+        {
+          path: 'go',
+          getComponent(location, cb) {
+            debugger;
+            System.import('pages/Blog/test')
+              .then(loadRoute(cb))
+              .catch(errorLoading);
+          },
+        }
+      ]
+
     },
     {
       path: 'about',
